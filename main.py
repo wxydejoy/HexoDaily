@@ -44,14 +44,18 @@ def get_file_path(root_path,file_list,dir_list): #遍历文件
         else:
             file_list.append(dir_file_path)
 
-def mdreplace(root_path,git_name,git_re,domain,npm_name,version):
+def urlreplace(root_path,git_name,git_re,domain,npm_name,version):
     file_list = []
     # 用来存放所有的目录路径
     dir_list = []
     get_file_path(root_path, file_list, dir_list)
-
-    print(file_list)
-
+    
+    for i in file_list:
+        fopen = open(filename, 'r+')
+        str = fopen.read()
+        str.replace(. xxx,xxx)
+    fopen.close()
+    
 
 
 if __name__ == '__main__':
