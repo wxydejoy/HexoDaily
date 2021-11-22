@@ -56,7 +56,7 @@ def getnpmversion(bag): # 获取npm包的版本号 并加一
     strr = cmd("npm view "+bag+" version",None)
     strr[-2] = int(strr[-2]) + 1
     # print(''.join(list(map(str, strr))))
-    return ''.join(list(map(str, strr)))
+    return ''.join(list(map(str, strr[0:-1])))
 
 
 
